@@ -1,0 +1,49 @@
+extend ./layout.pug
+include ./mixins/header.pug
+
+block header
+  +header('address')
+
+block content-header
+  include ./shared/hero_address.pug
+block content-body
+  .address
+    .address__lead
+      .address__lead-map(data-google-map="", data-markers='[{"lat": "55.766212", "lng": "37.626616", "label": "1"}, {"lat": "55.736427", "lng": "37.59309", "label": "2"}, {"lat": "55.734903", "lng": "37.607475", "label": "3"}]', data-max-limit-autozoom="14")
+      .address__lead-island
+        h2.title.title--h2 Ждём вас
+        ul.address__lead-list
+          li
+            | Рождественский б-р 10/7
+            span 09:00 &mdash; 22:00
+          li
+            | Зубовский б-р 2
+            span 10:00 &mdash; 23:00
+          li
+            | Крымская набережная д.2 парк Музеон
+            span 08:00 &mdash; 21:00
+    .address__cards
+      .address-card
+        .address-card__image
+          .address-card__image-bg(style="background-image: url(assets/address/1.png);")
+          .address-card__map(data-google-map="", data-markers='[{"lat": "55.766212", "lng": "37.626616", "label": "1"}]', data-max-limit-autozoom="14")
+        .address-card__content
+          h2.address-card__title.title.title--h2 Рождественский бульвар, 10/7
+          p.address-card__time 09:00 &mdash; 22:00
+          p.address-card__text Небольшое описание. Есть места для работы. Проводим встречи по&nbsp;пятницам.
+      .address-card
+        .address-card__image
+          .address-card__image-bg(style="background-image: url(assets/address/2.png);")
+          .address-card__map(data-google-map="", data-markers='[{"lat": "55.736427", "lng": "37.59309", "label": "2"}]', data-max-limit-autozoom="14")
+        .address-card__content
+          h2.address-card__title.title.title--h2 Зубовский  бульвар, 2
+          p.address-card__time 09:00 &mdash; 22:00
+          p.address-card__text Небольшое описание. Есть места для работы. Проводим встречи по&nbsp;пятницам.
+      .address-card
+        .address-card__image
+          .address-card__image-bg(style="background-image: url(assets/address/3.png);")
+          .address-card__map(data-google-map="", data-markers='[{"lat": "55.734903", "lng": "37.607475", "label": "3"}]', data-max-limit-autozoom="14")
+        .address-card__content
+          h2.address-card__title.title.title--h2 Крымская набережная, 2 парк Музеон
+          p.address-card__time 09:00 &mdash; 22:00
+          p.address-card__text Небольшое описание. Есть места для работы. Проводим встречи по&nbsp;пятницам.

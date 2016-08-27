@@ -1,0 +1,121 @@
+.address-card {
+  margin-bottom: rem(50px);
+}
+
+.address-card__image {
+  margin-bottom: rem(20px);
+  position: relative;
+}
+
+.address-card__image-bg {
+  padding-bottom: 57.7726218%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+
+.address-card__map {
+  width: 35.962877%;
+  padding-bottom: 35.962877%;
+  position: absolute;
+  display: none;
+  bottom: rem(0);
+  right: rem(0);
+  background-color: #f1f1f1;
+}
+
+.address-card__title {
+  margin: 0 0 rem(12px);
+}
+
+.address-card__time {
+  margin: 0 0 rem(12px);
+}
+
+.address-card__text {
+  margin: 0;
+}
+
+
+// Media Queries
+@include breakpoint-up($breakpoint-sm) {
+  .address-card__image {
+    margin-bottom: rem(30px);
+  }
+}
+
+@include breakpoint-up($breakpoint-md) {
+  .address-card {
+    margin-bottom: rem(60px);
+  }
+
+  .address-card__title {
+    margin-bottom: rem(18px);
+  }
+
+  .address-card__time {
+    margin-bottom: rem(18px);
+  }
+}
+
+@include breakpoint-up($breakpoint-lg) {
+  .address-card {
+    @include clearfix;
+    margin-bottom: rem(100px);
+
+    &:nth-child(odd) {
+      .address-card__image {
+        float: right;
+      }
+
+      .address-card__content {
+        padding-right: 6.30769231%;
+        padding-left: 0;
+      }
+
+      .address-card__map {
+        right: auto;
+        left: rem(-50px);
+      }
+    }
+  }
+
+  .address-card__image {
+    width: 2 * 100% / 3;
+    position: relative;
+    float: left;
+  }
+
+  .address-card__content {
+    width: 1 * 100% / 3;
+    padding-left: 6.30769231%;
+    float: left;
+  }
+
+  .address-card__map {
+    bottom: rem(-50px);
+    right: rem(-50px);
+    display: block;
+  }
+}
+
+@include breakpoint-up($breakpoint-xl) {
+  .address-card {
+    margin-bottom: rem(150px);
+
+    &:nth-child(odd) {
+      .address-card__content {
+        padding-left: 8.46153846%;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: rem(100%);
+    }
+  }
+
+  .address-card__content {
+    padding-right: 4.61538462%;
+    padding-left: 9.84615385%;
+  }
+}

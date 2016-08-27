@@ -1,0 +1,150 @@
+/*========================================
+// Clear
+========================================*/
+
+@mixin clearfix {
+  &:after {
+    content: "" !important;
+    display: block !important;
+    clear: both !important;
+  }
+}
+
+@mixin hidden-visually() {
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+}
+
+
+/*========================================
+// Breakpoints
+========================================*/
+
+@mixin breakpoint-up($point) {
+  @media screen and (min-width: em($point)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($point) {
+  @media screen and (max-width: em($point - 1)) {
+    @content;
+  }
+}
+
+
+/*========================================
+// Typography
+========================================*/
+
+@mixin list-style-none {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@mixin normalize-text-size($apply-line-height: true) {
+  font-size: rem($font-size-base);
+  line-height: rem($line-height-base);
+
+  @include breakpoint-up($breakpoint-sm) {
+    & {
+      font-size: rem(16px);
+      line-height: rem(26px);
+    }
+  }
+
+  @include breakpoint-up($breakpoint-lg) {
+    & {
+      font-size: rem(18px);
+      line-height: rem(28px);
+    }
+  }
+}
+
+/*========================================
+// Buttons
+========================================*/
+
+@mixin button-size($height, $padding-horizontal, $font-size, $context: $browser-context) {
+  height: rem($height, $context);
+  padding-right: rem($padding-horizontal, $context);
+  padding-left: rem($padding-horizontal, $context);
+  font-size: rem($font-size, $context);
+  line-height: rem($height - 1, $context);
+}
+
+@mixin button-style($background, $color, $color-hover: $color) {
+  background-color: $background;
+  color: $color;
+
+  &:hover {
+    background-color: lighten($background, 6%);
+    color: $color-hover;
+  }
+}
+
+@mixin button-outline($border-color, $color, $border-color-hover: $border-color, $color-hover: $color) {
+  border-color: $border-color;
+  color: $color;
+
+  &:hover {
+    border-color: $border-color-hover;
+    color: $color-hover;
+  }
+}
+
+
+/*========================================
+// Social Buttons
+========================================*/
+
+@mixin social-button-style($bg, $color, $bg-hover: null, $color-hover: null) {
+  background-color: $bg;
+  color: $color;
+
+  &:hover {
+    color: $color;
+  }
+
+  .__no-touch & {
+    &:hover {
+      @if $bg-hover and $color-hover {
+        background-color: $bg-hover;
+        color: $color-hover;
+      } @else if $bg-hover {
+        background-color: $bg-hover;
+      } @else {
+        background-color: lighten($bg, 6%);
+        color: $color;
+      }
+    }
+  }
+}
+
+
+/*========================================
+// Decors
+========================================*/
+
+@mixin decor-firs {
+  @extend %icon;
+  content: "#{$icon-fir}#{$icon-fir}#{$icon-fir}";
+  display: block;
+  font-size: rem(11px);
+  line-height: 1;
+  letter-spacing: rem(14px);
+  margin-left: rem(14px);
+}

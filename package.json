@@ -1,0 +1,43 @@
+{
+  "name": "les",
+  "version": "1.0.0",
+  "description": "frontend",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/genueee/les-static.git"
+  },
+  "author": "genueeee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/genueee/les-static/issues"
+  },
+  "homepage": "https://github.com/genueee/les-static#readme",
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-core": "^6.10.4",
+    "babel-loader": "^6.2.4",
+    "browser-sync": "^2.14.0",
+    "del": "^2.0.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-concat": "^2.6.0",
+    "gulp-consolidate": "^0.2.0",
+    "gulp-gh-pages": "^0.5.2",
+    "gulp-iconfont": "^8.0.1",
+    "gulp-inject": "^4.1.0",
+    "gulp-pug": "^3.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-util": "^3.0.7",
+    "gulp-watch": "^4.3.5",
+    "imports-loader": "^0.6.5",
+    "jquery": "^2.2.4",
+    "lodash": "^4.13.1",
+    "path": "^0.12.7",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.4",
+    "webpack": "^1.12.9"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,24 @@
+mixin social-share(title)
+  .social-share
+    if title
+      .social-share__title.title.title--h2= title
+    ul.social-share__list
+      li.social-share__item
+        .social-share__count
+          span.icon.icon--arrow-up
+          | 234
+      li.social-share__item
+        a.social-button.social-button--facebook(href="#", title="Facebook")
+          span.social-button__icon
+            span.icon.icon--facebook
+          span.social-button__text.visually--hidden Facebook
+      li.social-share__item
+        a.social-button.social-button--twitter(href="#", title="Twitter")
+          span.social-button__icon
+            span.icon.icon--twitter
+          span.social-button__text.visually--hidden Twitter
+      li.social-share__item
+        a.social-button.social-button--vkontakte(href="#", title="Вконтакте")
+          span.social-button__icon
+            span.icon.icon--vkontakte
+          span.social-button__text.visually--hidden Вконтакте

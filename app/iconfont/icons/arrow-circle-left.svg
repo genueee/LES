@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:cc="http://creativecommons.org/ns#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  width="512"
+  height="512"
+  viewBox="0 0 512 512"
+  version="1.1"
+  inkscape:version="0.91 r13725"
+  sodipodi:docname="arrow-left.svg">
+  <path
+    d="M 256,16 C 388.40967,16 496,123.59036 496,256 496,388.40964 388.40967,496 256,496 123.59033,496 16,388.40964 16,256 16,123.59036 123.59033,16 256,16 Z m 0,23.414634 C 136.24453,39.414634 39.41463,136.24457 39.41463,256 39.41463,375.75543 136.24453,472.58537 256,472.58537 375.75546,472.58537 472.58537,375.75543 472.58537,256 472.58537,136.24457 375.75546,39.414634 256,39.414634 Z M 267.96317,367.21951 203.31707,256 l 64.6461,-111.21951 40.71976,0 L 243.84241,256 308.68293,367.21951 Z" />
+</svg>

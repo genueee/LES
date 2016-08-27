@@ -1,0 +1,19 @@
+{
+  "name": "finteca",
+  "description": "frontend",
+  "main": "",
+  "authors": [
+    "genueeee",
+    "volosojui"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/genueee/finteca-static",
+  "moduleType": [],
+  "devDependencies": {
+    "slick-carousel": "~1.6.0",
+    "animate-sass": "~0.6.6",
+    "jquery.transit": "~0.9.12",
+    "nouislider": "^8.5.1"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,44 @@
+/*========================================
+// Visuality
+========================================*/
+
+.visually--hidden {
+  @include hidden-visually;
+}
+
+
+/*========================================
+// Colors
+========================================*/
+
+.color--pine {
+  color: $color-pine;
+}
+
+
+/*========================================
+// Text Aligment
+========================================*/
+
+.text--center {
+  text-align: center;
+}
+
+
+/*========================================
+// Decors
+========================================*/
+
+.decor--firs {
+  &:before {
+    @include decor-firs;
+    text-align: center;
+  }
+}
+
+.decor--firs-left {
+  &:before {
+    margin-left: 0;
+    text-align: left;
+  }
+}

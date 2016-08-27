@@ -1,0 +1,80 @@
+.static-layout {
+  padding-top: rem(20px);
+
+  .decor--firs {
+    margin-bottom: rem(40px);
+  }
+}
+
+.static-layout__column--aside {
+  .date {
+    margin-bottom: rem(8px);
+  }
+}
+
+
+// Media Queries
+@include breakpoint-up($breakpoint-sm) {
+  .static-layout__column--aside {
+    .date {
+      margin-bottom: rem(20px);
+    }
+
+    .social-share {
+      margin-bottom: rem(50px);
+    }
+  }
+}
+
+@include breakpoint-up($breakpoint-md) {
+  .static-layout {
+    padding: rem(40px) rem(50px) 0;
+  }
+}
+
+@include breakpoint-up($breakpoint-lg) {
+  .static-layout {
+    padding: rem(60px) rem(78px) 0;
+
+    .decor--firs {
+      margin-bottom: rem(60px);
+    }
+  }
+
+  .static-layout__column--aside {
+    .date {
+      margin-bottom: rem(20px);
+    }
+  }
+}
+
+@include breakpoint-up($breakpoint-xl) {
+  .static-layout__column--aside {
+    max-width: none;
+    width: rem(160px);
+    margin: 0;
+    padding-right: rem(30px);
+    position: absolute;
+    float: left;
+    border: 0;
+
+    .date {
+      margin-bottom: rem(36px);
+    }
+
+    .social-share {
+      margin-bottom: rem(50px);
+    }
+
+    .social-share__item {
+      margin: 0 0 rem(18px);
+      display: block;
+    }
+  }
+
+  .static-layout__column--content {
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+  }
+}

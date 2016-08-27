@@ -1,0 +1,31 @@
+mixin header(activeNavIndex, logoLink)
+  header.header
+    .container
+      ul.header__mobile-list
+        li.header__mobile-item.header__mobile-item--left
+          a.header__mobile-link(href="#", title="Адреса") Адреса
+        li.header__mobile-item.header__mobile-item--right
+          a.header__mobile-link(href="#", title="Меню", data-nav-open="") Меню
+      .header__logo
+        if logoLink == false
+          include ./../shared/logo.pug
+        else
+          a.header__logo-link(href="home.html", title="LES")
+            include ./../shared/logo.pug
+      nav.header__nav(data-nav="")
+        button.header__nav-close(data-nav-close="")
+          span.icon.icon--cross
+        ul.header__nav-list.header__nav-list--main
+          li.header__nav-item(class=activeNavIndex === 'address' ? "__active" : "")
+            a.header__nav-link(href="address.html", title="Адреса") Адреса
+          li.header__nav-item(class=activeNavIndex === 'blog' ? "__active" : "")
+            a.header__nav-link(href="post.html", title="Блог") Блог
+          li.header__nav-item(class=activeNavIndex === 'about' ? "__active" : "")
+            a.header__nav-link(href="about.html", title="О нас") О нас
+          li.header__nav-item(class=activeNavIndex === 'office' ? "__active" : "")
+            a.header__nav-link(href="office.html", title="Кофе в офис") Кофе в офис
+          li.header__nav-item(class=activeNavIndex === 'subscription' ? "__active" : "")
+            a.header__nav-link(href="subscription.html", title="Подписка на кофе") Подписка на кофе
+        ul.header__nav-list.header__nav-list--aside
+          li.header__nav-item
+            a.header__nav-link(href="#", title="Войти") Войти

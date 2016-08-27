@@ -1,0 +1,13 @@
+extend ./layout.pug
+include ./mixins/header.pug
+include ./mixins/post-teasers.pug
+
+block header
+  +header('home', false)
+
+block content-header
+  include ./shared/hero_home.pug
+
+block content-body
+  include ./shared/promo-service_subscription.pug
+  +post-teasers('Блог')

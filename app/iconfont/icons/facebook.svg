@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:cc="http://creativecommons.org/ns#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+  xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+  width="512"
+  height="512"
+  viewBox="0 0 512 512"
+  version="1.1"
+  inkscape:version="0.91 r13725"
+  sodipodi:docname="facebook.svg">
+  <path
+    d="m 296.07284,496 0,-218.94925 79.25246,0 11.86514,-85.33005 -91.1176,0 0,-54.47937 c 0,-24.70495 7.39685,-41.54212 45.60105,-41.54212 l 48.72611,-0.0191 0,-76.318102 C 381.9706,18.323971 353.04789,16 319.39877,16 249.14683,16 201.05349,55.764947 201.05349,128.79311 l 0,62.92759 -79.45349,0 0,85.33005 79.45349,0 0,218.94925 95.01935,0 z" />
+</svg>

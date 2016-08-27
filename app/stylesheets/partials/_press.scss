@@ -1,0 +1,177 @@
+.press__title {
+  margin-bottom: rem(20px);
+}
+
+.press__item {
+  margin-top: rem(20px);
+}
+
+.press__link {
+  display: block;
+
+  &,
+  &:hover {
+    color: $color-base;
+  }
+
+  .__no-touch & {
+    opacity: 1;
+    transition: opacity .2s ease;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+}
+
+.press__logo {
+  height: rem(82px);
+  margin-bottom: rem(20px);
+  position: relative;
+  border-bottom: 1px solid $color-base;
+  overflow: hidden;
+  line-height: rem(82px);
+}
+
+.press__logo-img {
+  max-height: rem(82px);
+  width: auto;
+  vertical-align: middle;
+  transform: translate(rem(-10px), 0) scale(.8);
+}
+
+.press__quote {
+  @include normalize-text-size;
+  margin: 0;
+  padding-left: rem(30px);
+
+  &:before {
+    content: "\201C";
+    margin: rem(11px) 0 0 rem(-30px);
+    float: left;
+    color: #e6deda;
+    font-size: rem(56px);
+    font-family: $font-family-base;
+  }
+}
+
+.press__item--village {
+  .press__logo-img {
+    width: rem(126px);
+    height: rem(47px);
+  }
+}
+
+.press__item--furfur {
+  .press__logo-img {
+    width: rem(178px);
+    height: rem(80px);
+    margin-left: rem(-16px);
+  }
+}
+
+.press__item--wonder {
+  .press__logo-img {
+    width: rem(154px);
+    height: rem(50px);
+    margin-left: rem(-12px);
+  }
+}
+
+
+// Media Queries
+@include breakpoint-up($breakpoint-sm) {
+  .press__title {
+    margin-bottom: rem(40px);
+  }
+
+  .press__list {
+    margin: rem(-20px) 0 0 rem(-20px);
+    font-size: 0;
+  }
+
+  .press__item {
+    width: (100% / 2);
+    padding-left: 20px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .press__logo-img {
+    transform: none;
+  }
+
+  .press__quote {
+    padding-left: rem(36px);
+
+    &:before {
+      margin: rem(13px) 0 0 rem(-36px);
+      font-size: rem(64px);
+    }
+  }
+}
+
+@include breakpoint-up($breakpoint-md) {
+  .press__list {
+    margin-left: rem(-40px);
+  }
+
+  .press__item {
+    padding-left: rem(40px);
+  }
+
+  .press__quote {
+    padding-left: rem(40px);
+
+    &:before {
+      margin: rem(15px) 0 0 rem(-40px);
+      font-size: rem(70px);
+    }
+  }
+}
+
+@include breakpoint-up($breakpoint-lg) {
+  .press__title {
+    margin-bottom: rem(50px);
+  }
+
+  .press__list {
+    margin-top: rem(-30px);
+  }
+
+  .press__item {
+    width: (100% / 3);
+    margin-top: rem(30px);
+  }
+
+  .press__logo {
+    margin-bottom: rem(26px);
+  }
+
+  .press__quote {
+    padding-left: rem(46px);
+
+    &:before {
+      margin: rem(16px) 0 0 rem(-46px);
+      font-size: rem(90px);
+    }
+  }
+}
+
+@include breakpoint-up($breakpoint-xl) {
+  .press__list {
+    margin-left: rem(-128px);
+  }
+
+  .press__item {
+    max-width: rem(440px);
+    padding-left: rem(128px);
+  }
+}
+
+// Fucking fix
+@include breakpoint-up(1400px) {
+  .press__quote {
+    padding-left: 0;
+  }
+}

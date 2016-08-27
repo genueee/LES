@@ -1,0 +1,24 @@
+doctype html
+<html class="__no-js">
+include ./shared/head.pug
+
+body
+  //- .layout
+  block header
+
+  main.content
+    .content__header
+      block content-header
+    .content__layout
+      .content__body
+        block content-body
+
+  include ./shared/footer.pug
+
+  block modals
+
+  //- Scripts
+  // inject:js
+  // endinject
+  //- end Scripts
+</html>

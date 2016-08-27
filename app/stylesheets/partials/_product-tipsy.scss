@@ -1,0 +1,129 @@
+.product-tipsy {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  user-select: none;
+  vertical-align: top;
+  white-space: normal;
+
+  &.__open {
+    .product-tipsy__popup {
+      display: block;
+    }
+
+    .__no-touch & {
+      .product-tipsy__toggle {
+        background-color: #548667;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.product-tipsy__toggle {
+  width: rem(17px);
+  height: rem(17px);
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: $color-gray-nurse;
+  color: #b7b7b7;
+  font-size: rem(16px);
+  line-height: rem(18px);
+  text-align: center;
+  vertical-align: top;
+  cursor: pointer;
+  transition: background-color .2s ease, opacity .2s ease, color .2s ease;
+
+  .__no-touch & {
+    &:hover {
+      background-color: #548667;
+      color: $color-white;
+    }
+  }
+}
+
+.product-tipsy__popup {
+  width: rem(310px);
+  margin-top: rem(14px);
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 90;
+  background-color: $color-pine;
+  color: $color-white;
+  font-size: rem(30px);
+}
+
+.product-tipsy__popup-arrow {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  border-right: rem(8px) solid transparent;
+  border-bottom: rem(8px) solid $color-pine;
+  border-left: rem(8px) solid transparent;
+}
+
+.product-tipsy__popup-inner {
+  padding: rem(24px) rem(18px);
+}
+
+.product-tipsy__table {
+  width: 100%;
+  display: table;
+}
+
+.product-tipsy__table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.product-tipsy__text {
+  margin: 0;
+  font-size: rem(15px);
+  line-height: rem(23px);
+}
+
+.product-tipsy__list {
+  @include list-style-none;
+  font-size: 0;
+}
+
+.product-tipsy__item {
+  width: (100% / 2);
+  margin-top: rem(24px);
+  padding-right: rem(15px);
+  display: inline-block;
+  vertical-align: bottom;
+
+  .product-tipsy__table-cell {
+    vertical-align: bottom;
+
+    & + .product-tipsy__table-cell {
+      width: 100%;
+      padding-left: 10px;
+    }
+  }
+
+  .product-tipsy__item-text {
+    margin-bottom: rem(4px);
+  }
+}
+
+.product-tipsy__icon {
+  height: rem(50px);
+  width: rem(36px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  line-height: rem(50px);
+}
+
+.product-tipsy__icon-img {
+  max-height: 100%;
+  max-width: 100%;
+  vertical-align: bottom;
+}

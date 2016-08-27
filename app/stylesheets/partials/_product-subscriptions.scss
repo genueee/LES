@@ -1,0 +1,457 @@
+// Subscriptions
+.product-subscriptions {
+  margin: 0 rem(-$grid-gutter-width);
+}
+
+.product-subscriptions__title {
+  max-width: rem(250px);
+  margin: 0 auto rem(76px);
+  padding: rem(40px) $grid-gutter-width 0;
+  text-align: center;
+}
+
+.product-subscriptions__item {
+  & + & {
+    margin-top: rem(70px);
+  }
+}
+
+
+// Media Queries
+@include breakpoint-up($breakpoint-sm) {
+  .product-subscriptions__title {
+    padding-top: rem(64px);
+    max-width: none;
+  }
+}
+
+@include breakpoint-up($breakpoint-md) {
+  .product-subscriptions {
+    max-width: rem(1080px);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .product-subscriptions__title {
+    margin-bottom: rem(112px);
+  }
+
+  .product-subscriptions__item {
+    & + & {
+      margin-top: rem(112px);
+    }
+  }
+}
+
+@include breakpoint-up($breakpoint-lg) {
+  .product-subscriptions__title {
+    padding-top: 80px;
+  }
+}
+
+
+// Subscription
+.product-subscription {
+  @include clearfix();
+  padding: rem(20px);
+  position: relative;
+  background-color: $color-concrete;
+}
+
+.product-subscription__image {
+  width: 30%;
+  margin-top: rem(-30px);
+  position: absolute;
+  right: $grid-gutter-width;
+}
+
+.product-subscription__image-img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.product-subscription__globe {
+  margin: rem(4px) 40% rem(15px) 0;
+  font-size: rem(48px);
+}
+
+.product-subscription__title {
+  margin: 0 40% rem(28px) 0;
+}
+
+.product-subscription__options {
+  @include list-style-none;
+  margin: 0 rem(-15px) rem(30px);
+}
+
+.product-subscription__options-item {
+  padding-right: rem(20px);
+}
+
+.product-subscription__option {
+  max-width: 100%;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+
+  .__no-touch & {
+    &:hover {
+      .product-subscription__option-icon {
+        background-color: #548667;
+      }
+
+      .product-subscription__option-text {
+        color: #548667;
+      }
+
+      .product-subscription__help {
+        .product-tipsy__toggle {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.product-subscription__option-control {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+  &[disabled] {
+    & + .product-subscription__option-text {
+      cursor: default;
+    }
+  }
+
+  &:checked {
+    & ~ .product-subscription__option-icon {
+      &:before,
+      &:after {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    & ~ .product-subscription__option-text {
+      background-color: $color-gray-nurse;
+      color: $color-pine !important;
+    }
+
+    & ~ .product-subscription__help {
+      left: rem(8px);
+    }
+  }
+}
+
+.product-subscription__option-icon {
+  width: rem(10px);
+  height: rem(10px);
+  position: absolute;
+  display: inline-block;
+  top: rem(12px);
+  left: rem(15px);
+  border-radius: 50%;
+  background-color: $color-silver;
+
+  .__no-touch & {
+    transition: background-color .2s ease;
+  }
+
+  &:before {
+    content: "";
+    width: rem(20px);
+    height: rem(20px);
+    margin: rem(-10px) 0 0 rem(-10px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    border-radius: 50%;
+    background-color: $color-pine;
+    opacity: 0;
+    transform: scale(.8);
+    transition: opacity .2s ease, transform .2s ease;
+  }
+
+  &:after {
+    @extend %icon;
+    content: $icon-tick;
+    width: rem(10px);
+    height: rem(10px);
+    margin: rem(-5px) 0 0 rem(-5px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    opacity: 0;
+    color: $color-white;
+    font-size: rem(10px);
+    transform: scale(.8);
+    transition: opacity .2s ease, transform .2s ease;
+  }
+}
+
+.product-subscription__option-text {
+  @include ellipsis;
+  max-width: 100%;
+  height: rem(34px);
+  padding: 0 rem(24px);
+  display: inline-block;
+  border-radius: 9999em;
+  background-color: transparent;
+  color: $color-pine;
+  font-weight: bold;
+  font-size: rem(16px);
+  line-height: rem(34px);
+  vertical-align: top;
+  cursor: pointer;
+
+  .__no-touch & {
+    transition: background-color .2s ease, color .2s ease;
+  }
+
+  span {
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  .product-subscription__option-icon + & {
+    padding-left: rem(44px);
+  }
+}
+
+.product-subscription__help {
+  margin-top: rem(9px);
+  left: rem(-12px);
+  transition: left .1s ease;
+
+  .product-tipsy__toggle {
+    .__no-touch & {
+      opacity: 0;
+    }
+  }
+
+  &.__open {
+    .product-tipsy__toggle {
+      .__no-touch & {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.product-subscription__weight {
+  clear: both;
+}
+
+.product-subscription__periods {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+
+.product-subscription__period {
+  position: relative;
+  display: table-cell;
+  text-align: center;
+  vertical-align: top;
+
+  & + & {
+    .product-subscription__period-content {
+      &:before {
+        left: -1px;
+        border-left-color: transparent;
+      }
+    }
+  }
+}
+
+.product-subscription__period-control {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+
+  &:checked {
+    & ~ .product-subscription__period-content {
+      background-color: $color-gray-nurse;
+
+      &:before {
+        border-color: $color-pine;
+      }
+    }
+  }
+}
+
+.product-subscription__period-content {
+  height: rem(90px);
+  padding: 6px 0;
+  position: relative;
+  display: block;
+  background-color: transparent;
+  color: $color-pine;
+  font-size: rem(16px);
+  line-height: rem(22px);
+  cursor: pointer;
+
+  .__no-touch & {
+    transition: background-color .2s ease;
+
+    &:before {
+      transition: border-color .2s ease;
+    }
+
+    &:hover {
+      background-color: $color-gray-nurse;
+
+      &:before {
+        border-color: $color-pine;
+      }
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid $color-silver;
+  }
+}
+
+.product-subscription__period-icon {
+  display: block;
+  font-size: rem(30px);
+  line-height: 1;
+  color: #a8a8a8;
+
+  .icon {
+    margin-bottom: rem(4px);
+    vertical-align: top;
+  }
+}
+
+.product-subscription__period-title {
+  @include ellipsis;
+  display: block;
+  font-weight: bold;
+}
+
+.product-subscription__period-price {
+  @include ellipsis;
+  display: block;
+}
+
+
+// Media Queries
+@include breakpoint-up($breakpoint-sm) {
+  .product-subscription__image {
+    width: 36.5%;
+    margin-top: rem(-50px);
+    margin-bottom: rem(30px);
+    position: relative;
+    right: auto;
+    float: right;
+  }
+
+  .product-subscription__image-img {
+    max-width: rem(240px);
+  }
+
+  .product-subscription__globe {
+    margin-right: 45%;
+  }
+
+  .product-subscription__title {
+    margin-right: 45%;
+  }
+}
+
+@include breakpoint-up($breakpoint-md) {
+  .product-subscription__image {
+    width: 100%;
+    padding-right: rem(380px);
+    margin-top: rem(-82px);
+    margin-right: -100%;
+    float: left;
+    text-align: center;
+  }
+
+  .product-subscription__image-img {
+    max-width: rem(360px);
+  }
+
+  .product-subscription__content {
+    width: rem(340px);
+    position: relative;
+    float: right;
+  }
+
+  .product-subscription__globe {
+    margin: rem(-6px) 0 0;
+    position: relative;
+    float: right;
+  }
+
+  .product-subscription__title {
+    margin: rem(2px) 0 rem(15px);
+  }
+}
+
+@include breakpoint-up($breakpoint-lg) {
+  .product-subscription {
+    padding: rem(30px) rem(40px);
+  }
+
+  .product-subscription__image {
+    padding-left: rem(20px);
+    padding-right: rem(485px);
+
+    .product-subscription__image-img {
+      max-width: rem(365px);
+    }
+  }
+
+  .product-subscription__content {
+    width: rem(420px);
+  }
+
+  .product-subscription__globe {
+    font-size: rem(62px);
+  }
+
+  .product-subscription__options {
+    min-height: rem(190px);
+    margin-bottom: rem(42px);
+  }
+
+  .product-subscription__option-icon {
+    top: rem(14px);
+    left: rem(18px);
+  }
+
+  .product-subscription__option-text {
+    height: rem(38px);
+    font-size: rem(18px);
+    line-height: rem(39px);
+
+    .product-subscription__option-icon + & {
+      padding-left: rem(46px);
+    }
+  }
+
+  .product-subscription__help {
+    margin-top: rem(11px);
+  }
+
+  .product-subscription__period-content {
+    height: rem(107px);
+    padding: rem(11px) 0;
+    font-size: rem(18px);
+    line-height: rem(26px);
+  }
+}

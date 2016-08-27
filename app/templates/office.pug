@@ -1,0 +1,17 @@
+extend ./layout.pug
+include ./mixins/header.pug
+
+block header
+  +header('office')
+
+block content-header
+  include ./shared/hero_office.pug
+block content-body
+  .static-layout
+    .static-layout__column.static-layout__column--content
+      .static-content
+        p Натуральный кофе делает клиентов добрее, а&nbsp;сотрудников&nbsp;&mdash; продуктивнее. Мы&nbsp;организовываем бесперебойную ежемесячную поставку любимого кофе. Натуральный кофе делает клиентов добрее, а&nbsp;сотрудников&nbsp;&mdash; продуктивнее. Мы&nbsp;организовываем бесперебойную ежемесячную поставку любимого кофе.
+      dl.fast-contacts
+        dt.fast-contacts__title Заказывайте по&nbsp;телефону
+        dd.fast-contacts__item
+          a(href="tel:+79261775113") +7 926 177-51-13

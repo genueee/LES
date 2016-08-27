@@ -1,0 +1,14 @@
+.content {
+  flex: 1 0 auto;
+  overflow: hidden; // Обрезаем выползающие края некоторых блоков, чтобы не появлялся горизонтальный скролл
+}
+
+.content__layout {
+  @extend .container;
+  position: relative;
+}
+
+.content__body {
+  min-height: rem(220px);
+  background-color: $color-white;
+}

@@ -1,0 +1,279 @@
+.hero {
+  position: relative;
+  background-color: $color-dark-pine;
+  color: $color-white;
+  text-align: center;
+
+  a {
+    color: inherit;
+  }
+}
+
+.hero__container {
+  max-width: 890px + $grid-gutter-width * 2;
+  margin: auto;
+  padding-top: rem(110px);
+  padding-bottom: rem(50px);
+}
+
+.hero__cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(#3c4840, .6);
+  }
+}
+
+.hero__content {
+  height: 100%;
+  position: relative;
+}
+
+.hero__title {
+  margin: rem(10px) 0;
+}
+
+.hero__text {
+  margin: rem(10px) 0;
+
+  br {
+    display: none;
+  }
+}
+
+.hero__slider {
+  &.__inited {
+    .hero__slider-slide {
+      display: block;
+    }
+  }
+
+  .slick-list,
+  .slick-track,
+  .slick-slide {
+    height: 100%;
+  }
+
+  .slick-arrow {
+    width: rem(30px);
+    height: rem(30px);
+    margin-bottom: rem(25px);
+    padding: 0;
+    position: absolute;
+    display: block;
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    z-index: 2;
+    border: none;
+    outline: none;
+    background: transparent;
+    opacity: 1;
+    color: transparent;
+    line-height: 0;
+    font-size: 0;
+    cursor: pointer;
+
+    &:before {
+      @extend %icon;
+      color: $color-white;
+      font-size: rem(30px);
+      line-height: 1;
+    }
+
+    .__no-touch & {
+      transition: opacity .2s ease, color .2s ease;
+
+      &:hover {
+        &:before {
+          color: lighten($color-white, 8%);
+        }
+      }
+
+      &:before {
+        &:before {
+          transition: color .2s ease;
+        }
+      }
+    }
+  }
+
+  .slick-prev {
+    margin-left: rem(-35px);
+
+    &:before {
+      @extend %icon-arrow-circle-left;
+    }
+  }
+
+  .slick-next {
+    margin-left: rem(5px);
+    &:before {
+      @extend %icon-arrow-circle-right;
+    }
+  }
+
+  .slick-disabled {
+    cursor: default;
+
+    &:before {
+      opacity: .1;
+      color: $color-white !important;
+    }
+  }
+
+  &,
+  & + .hero__content {
+    .hero__container {
+      padding-bottom: rem(100px);
+    }
+  }
+}
+
+.hero__slider-slide {
+  height: 100%;
+  position: relative;
+  display: none;
+
+  &:first-child {
+    display: block;
+  }
+}
+
+.hero__slider--underlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hero--main {
+  .hero__cover {
+    &:after {
+      background-color: rgba(#3c4840, .4);
+    }
+  }
+}
+
+
+// Media Queries
+@include breakpoint-up($breakpoint-sm) {
+  .hero__content {
+    min-height: rem(400px);
+    display: flex;
+  }
+
+  .hero__text {
+    br {
+      display: inline;
+    }
+  }
+}
+
+@include breakpoint-up($breakpoint-md) {
+  .hero {
+    margin-bottom: rem(-80px);
+  }
+
+  .hero__container {
+    padding-bottom: rem(150px);
+  }
+
+  .hero__slider {
+    .slick-arrow {
+      bottom: rem(80px);
+    }
+
+    &,
+    & + .hero__content {
+      .hero__container {
+        padding-bottom: rem(180px);
+      }
+    }
+  }
+
+  .hero--great {
+    .hero__content {
+      min-height: rem(500px);
+    }
+  }
+}
+
+@include breakpoint-up($breakpoint-lg) {
+  .hero {
+    margin-bottom: rem(-200px);
+  }
+
+  .hero__container {
+    padding-top: rem(165px);
+    padding-bottom: rem(230px);
+  }
+
+  .hero__content {
+    min-height: rem(650px);
+  }
+
+  .hero__slider {
+    .slick-arrow {
+      width: rem(39px);
+      height: rem(39px);
+      margin-bottom: rem(60px);
+      bottom: rem(200px);
+      font-size: rem(39px);
+
+      &:before {
+        font-size: rem(39px);
+      }
+    }
+
+    .slick-prev {
+      margin-left: rem(-42px);
+    }
+
+    .slick-next {
+      margin-left: rem(12px);
+    }
+
+    &,
+    & + .hero__content {
+      .hero__container {
+        padding-bottom: rem(370px);
+      }
+    }
+  }
+
+  .hero--great {
+    margin-bottom: rem(-220px);
+
+    .hero__content {
+      min-height: rem(884px);
+    }
+
+    .hero__slider {
+      .slick-arrow {
+        bottom: rem(220px);
+      }
+
+      &,
+      & + .hero__content {
+        .hero__container {
+          padding-bottom: rem(400px);
+        }
+      }
+    }
+  }
+}

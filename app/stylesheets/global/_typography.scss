@@ -1,0 +1,94 @@
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  font-size: 1em;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @include normalize-text-size;
+  font-family: $font-family-base;
+  color: $color-base;
+}
+
+a {
+  color: $color-link;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-link-hover;
+  }
+
+  .__no-touch & {
+    transition: color .2s ease;
+  }
+}
+
+a[href^="tel:"] {
+  border: 0;
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+.title {
+  font-weight: bold;
+  font-family: $font-family-proximanova-extracond;
+}
+
+.title--h1 {
+  font-size: rem(38px);
+  line-height: rem(42px);
+}
+
+.title--h2 {
+  font-size: rem(26px);
+  line-height: rem(32px);
+}
+
+
+// .font-museosanscyrl-thin {
+//   font-family: $font-family-museosanscyrl-thin;
+// }
+
+// .font-museosanscyrl-light {
+//   font-family: $font-family-museosanscyrl-light;
+// }
+
+// .font-museosanscyrl {
+//   font-family: $font-family-museosanscyrl;
+// }
+
+// .font-museosanscyrl-black {
+//   font-family: $font-family-museosanscyrl-black;
+// }
+
+@include breakpoint-up($breakpoint-sm) {
+  .title--h1 {
+    font-size: rem(50px);
+    line-height: rem(56px);
+  }
+
+  .title--h2 {
+    font-size: rem(34px);
+    line-height: rem(40px);
+  }
+}
+
+@include breakpoint-up($breakpoint-lg) {
+  .title--h1 {
+    font-size: rem(72px);
+    line-height: rem(76px);
+  }
+
+  .title--h2 {
+    font-size: rem(42px);
+    line-height: rem(52px);
+  }
+}

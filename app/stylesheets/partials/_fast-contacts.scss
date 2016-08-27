@@ -1,0 +1,51 @@
+.fast-contacts {
+  margin: 0 0 rem(40px);
+  padding: 0;
+
+  .static-content + & {
+    margin-top: rem(-30px);
+  }
+}
+
+.fast-contacts__title {
+  margin: 0 0 rem(6px);
+  padding: 0;
+}
+
+.fast-contacts__item {
+  margin: 0 0 rem(6px);
+  padding: 0;
+  font-weight: bold;
+  font-size: rem(22px);
+  line-height: rem(28px);
+  font-family: $font-family-proximanova-extracond;
+}
+
+
+// Media Queries
+@include breakpoint-up($breakpoint-sm) {
+  .fast-contacts__item {
+    font-size: rem(28px);
+    line-height: rem(34px);
+  }
+}
+
+@include breakpoint-up($breakpoint-lg) {
+  .fast-contacts {
+    margin-bottom: rem(70px);
+
+    .static-content + & {
+      margin-top: rem(-50px);
+    }
+  }
+
+  .fast-contacts__title {
+    margin-bottom: rem(10px);
+  }
+
+  .fast-contacts__item {
+    margin-bottom: rem(8px);
+    font-size: rem(38px);
+    line-height: rem(44px);
+  }
+}

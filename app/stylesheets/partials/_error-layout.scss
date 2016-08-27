@@ -1,0 +1,121 @@
+.error-layout {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: table;
+  text-align: center;
+  overflow: hidden;
+}
+
+.error-layout__icons {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  > span {
+    position: absolute;
+  }
+
+  .tree-1 {
+    width: 20px;
+    height: 36px;
+    background-image: url('#{$image-path}/trees/tree-1.svg');
+  }
+
+  .tree-2 {
+    width: 20px;
+    height: 35px;
+    background-image: url('#{$image-path}/trees/tree-2.svg');
+  }
+
+  .tree-3 {
+    width: 20px;
+    height: 35px;
+    background-image: url('#{$image-path}/trees/tree-3.svg');
+  }
+
+  .tree-5 {
+    width: 3px;
+    height: 11px;
+    background-image: url('#{$image-path}/trees/tree-5.svg');
+  }
+
+  .tree-6 {
+    width: 20px;
+    height: 36px;
+    background-image: url('#{$image-path}/trees/tree-6.svg');
+  }
+
+  .tree-7 {
+    width: 3px;
+    height: 35px;
+    background-image: url('#{$image-path}/trees/tree-7.svg');
+  }
+
+  .tree-8 {
+    width: 20px;
+    height: 36px;
+    background-image: url('#{$image-path}/trees/tree-8.svg');
+  }
+}
+
+.error-layout__container {
+  padding-right: $grid-gutter-width;
+  padding-left: $grid-gutter-width;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.error-layout__content {
+  max-width: 380px;
+  position: relative;
+  display: inline-block;
+  background-color: $color-white;
+  box-shadow: 0 0 0 10px $color-white;
+  text-align: left;
+
+  a {
+    border-bottom: .072em solid;
+  }
+}
+
+.error-layout__number {
+  margin-bottom: rem(12px);
+  font-size: rem(70px);
+  line-height: 1;
+  letter-spacing: rem(6px);
+}
+
+.error-layout__text {
+  font-family: $font-family-proximanova-extracond;
+  font-size: rem(30px);
+  line-height: rem(32px);
+}
+
+
+// Media Queries
+@include breakpoint-up($breakpoint-sm) {
+  .error-layout__number {
+    margin-bottom: rem(20px);
+    font-size: rem(88px);
+    letter-spacing: rem(8px);
+  }
+
+  .error-layout__text {
+    font-size: rem(40px);
+    line-height: rem(42px);
+  }
+}
+
+@include breakpoint-up($breakpoint-lg) {
+  .error-layout__number {
+    margin-bottom: rem(26px);
+    font-size: rem(102px);
+    letter-spacing: rem(11px);
+  }
+
+  .error-layout__text {
+    font-size: rem(55px);
+    line-height: rem(52px);
+  }
+}

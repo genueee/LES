@@ -1,0 +1,28 @@
+.gmaps-marker {
+  padding-bottom: rem(8px);
+  font-weight: bold;
+  font-size: rem(30px);
+  font-family: $font-family-proximanova-extracond;
+  text-align: center;
+  user-select: none;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: rem(8px) solid $color-pine;
+    border-right: rem(23px) solid transparent;
+    border-left: rem(23px) solid transparent;
+  }
+}
+
+.gmaps-marker__inner {
+  width: rem(46px);
+  height: rem(45px);
+  background-color: $color-pine;
+  color: $color-white;
+  line-height: rem(51px);
+}

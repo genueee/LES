@@ -1,0 +1,116 @@
+/*========================================
+// Colors
+========================================*/
+
+$color-black: #000;
+$color-dark: #1a171d;
+
+$color-dark-pine: #1b4528;
+$color-pine: #385d46;
+
+$color-gray: #616161;
+$color-silver: #c4c4c4;
+$color-gray-nurse: #e3e7e5;
+$color-concrete: #f3f3f3;
+
+$color-dawn-pink: #f5efec;
+
+$color-white: #fff;
+
+$color-base: $color-dark;
+
+$color-link: $color-pine;
+$color-link-hover: lighten($color-link, 8%);
+
+
+/*========================================
+// Fonts
+========================================*/
+
+$font-family-proximanova: 'Proxima Nova', Helvetica, Arial, sans-serif;
+$font-family-proximanova-extracond: 'Proxima Nova ExtraCondensed', Helvetica, Arial, sans-serif;
+
+$font-family-base: $font-family-proximanova;
+
+$font-size-base: 14px;
+$line-height-base: 22px;
+
+
+/*========================================
+// Browser
+========================================*/
+
+$browser-context: 16;
+
+
+/*========================================
+// Breakpoints
+========================================*/
+
+// Extra small screen / phone
+$breakpoint-xs: 0;
+
+// Small screen / phone
+$breakpoint-sm: 544px;
+
+// Medium screen / tablet
+$breakpoint-md: 768px;
+
+// Large screen / desktop
+$breakpoint-lg: 992px;
+
+// Extra large screen / wide desktop
+$breakpoint-xl: 1200px;
+
+
+/*========================================
+// Grid
+========================================*/
+$grid-gutter-width: 20px;
+
+
+/*========================================
+// Animate.css
+========================================*/
+
+// $use-fadeIn: true;
+// $use-fadeInRight: true;
+// $use-fadeInRightBig: true;
+// $use-fadeInUp: true;
+// $use-fadeInDown: true;
+// $use-zoomIn: true;
+// $use-flipInY: true;
+
+
+/*========================================
+// Buttons
+========================================*/
+
+$button-height-breakpoint-xs: 60px;
+$button-padding-horizontal-breakpoint-xs: 30px;
+$button-font-size-breakpoint-xs: 16px;
+
+$button-height-breakpoint-sm: 60px;
+$button-padding-horizontal-breakpoint-sm: 40px;
+$button-font-size-breakpoint-sm: 18px;
+
+
+/*========================================
+// Social Buttons
+========================================*/
+
+$social-button-facebook-bg: #5269a1;
+$social-button-facebook-bg-hover: lighten(#5269a1, 6%);
+$social-button-facebook-color: $color-white;
+
+$social-button-twitter-bg: #5f9fca;
+$social-button-twitter-bg-hover: lighten(#5f9fca, 6%);
+$social-button-twitter-color: $color-white;
+
+$social-button-vkontakte-bg: #4c6c91;
+$social-button-vkontakte-bg-hover: lighten(#4c6c91, 6%);
+$social-button-vkontakte-color: $color-white;
+
+$social-button-instagram-bg: #3e9ac9;
+$social-button-instagram-bg-hover: lighten(#3e9ac9, 6%);
+$social-button-instagram-color: $color-white;

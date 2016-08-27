@@ -1,0 +1,61 @@
+extend ./layout.pug
+include ./mixins/header.pug
+include ./mixins/social-share.pug
+include ./mixins/post-teasers.pug
+
+block header
+  +header('blog')
+
+block content-header
+  include ./shared/hero_post.pug
+block content-body
+  .static-layout
+    aside.static-layout__column.static-layout__column--aside
+      time.date 21 апреля
+      +social-share()
+    .static-layout__column.static-layout__column--content
+      .static-content
+        p Прототип нового приспособления для заваривания кофе Алан Адлер, основатель компании Aerobie (летающие кольца и&nbsp;тарелки &laquo;фрисби&raquo;),<br /><br /> разработал в&nbsp;2004&nbsp;году. Большой любитель кофе Адлер давно мечтал о&nbsp;том, чтобы сделать кофеварку ровно на&nbsp;одну чашку.
+        blockquote
+          p Фильтровые кофеварки обычно готовят большой объем кофе. Я&nbsp;пробовал много рецептов, чтобы сварить только одну чашку кофе, и&nbsp;ни&nbsp;один не&nbsp;работал. Тогда я&nbsp;решил создать не&nbsp;рецепт, но&nbsp;кофеварку.
+          footer Алан Адлер
+        p В&nbsp;2005 году Алан Адлер и&nbsp;Алекс Теннант, коммерческий директор Aerobie, представили новую кофеварку Aeropress на&nbsp;кофейном фестивале в&nbsp;Сиэтле (Seattle&rsquo;s Coffee Fest), где ее&nbsp;заметили и&nbsp;приняли благосклонно. И&nbsp;все&nbsp;же, изобретателям пришлось потрудиться, чтобы сделать свое изобретение всемирно известным. Помогли Интернет и&nbsp;профессиональное кофейное сообщество. На&nbsp;CoffeeGeek с&nbsp;его 82&nbsp;000 подписчиков тема Aerobie Aeropress набрала 2,700 постов и&nbsp;7,3 миллиона просмотров. Адлер лично вел дискуссию и&nbsp;отвечал на&nbsp;вопросы.
+        p В&nbsp;2008 году в&nbsp;своей кофейне в&nbsp;Осло Tim Wendelboe просто для удовольствия решил провести чемпионат по&nbsp;аэропрессу. Было только три участника, один приз и&nbsp;общий праздничный стол для всех.
+        p.lead Спустя восемь лет в World AeroPress Championship принимают участие бариста из 50 стран мира
+        p От&nbsp;чемпионата к&nbsp;чемпионату менялись методы работы с&nbsp;кофеваркой. Авторы блога <a href="#" title="Nordic Coffee Culture" target="_blank">Nordic Coffee Culture</a> провели сравнительный анализ рецептов с&nbsp;2009 по&nbsp;2014 год и&nbsp;выделили несколько опорных пунктов, которые помогут сделать идеальный аэропресс. Температура воды всегда была достаточно низкой (75-85&nbsp;Со). В&nbsp;2009 и&nbsp;2010 участники выбирали перевернутый метод, большее количество кофе, быстрое время экстракции в&nbsp;сочетании с&nbsp;перемешиванием. Далее увеличилось время продавливания, уменьшились сила продавливания и&nbsp;количество кофе. Победитель WAC 2011 и&nbsp;2013 Jeff Verellen использовал прямой метод и&nbsp;технику предсмачивания, не&nbsp;продавливал аэропресс до&nbsp;конца, а&nbsp;оставлял немного воды. Победитель WAC 2014 Shuichi Sasaki соединил в&nbsp;своем рецепте фактически все компоненты: прямой метод, низкая температура воды, предсмачивание, медленное продавливание.
+        p Есть разные мнения на&nbsp;тему, какой из&nbsp;методов&nbsp;&mdash; прямой или перевернутый&nbsp;&mdash; дает лучший результат. Сам Алан Адлер не&nbsp;думает, что есть какое-либо различие во&nbsp;вкусе и&nbsp;говорит о&nbsp;том, что половина участников WAC заваривает аэропресс перевернутым методом, а&nbsp;половина&nbsp;&mdash; прямым. Еще можно сказать, что перевернутый метод позволяет избежать просачивания в&nbsp;чашку некоторого количества кофе в&nbsp;процессе заваривания.
+        figure
+          img(src="assets/static-content/1.png", alt="")
+        p Благодаря энтузиазму бариста аэропресс &laquo;оброс&raquo; не&nbsp;только кучей разных рецептов, но&nbsp;и&nbsp;таким приятным изобретением как многоразовый металлический фильтр вместо бумажного. Придумали фильтр в&nbsp;2012 году двое бариста из&nbsp;Сиэтла.
+        p Аэропресс всегда был не&nbsp;только о&nbsp;кофе, но&nbsp;и&nbsp;о&nbsp;дизайне. Каждая страна, проводящая национальный чемпионат по&nbsp;аэропрессу, создает для соревнования свой постер. Сформировавшаяся за&nbsp;несколько лет коллекция уже может претендовать на&nbsp;выставку в&nbsp;какой-нибудь известной арт-галерее.
+
+        .slider.slider--single(data-single-slider="")
+          .slider__viewer
+            .slider__slide
+              img(src="assets/static-content/2.png", alt="")
+            .slider__slide
+              img(src="assets/static-content/2.png", alt="")
+            .slider__slide
+              img(src="assets/static-content/2.png", alt="")
+            .slider__slide
+              img(src="assets/static-content/2.png", alt="")
+            .slider__slide
+              img(src="assets/static-content/2.png", alt="")
+            .slider__slide
+              img(src="assets/static-content/2.png", alt="")
+
+        p В&nbsp;России чемпионат проводится два года подряд силами Аркадия Климанова (Sweet Beans, Краснодар). В&nbsp;2016 году чемпионский титул и&nbsp;поездку на&nbsp;мировое состязание выиграл Дмитрий Маурин (Екатеринбург).
+        h2 Рецепт победителя российского чемпионата по&nbsp;аэропрессу 2016
+        ul
+          li 23&nbsp;грамма кофе (Кения),
+          li 260&nbsp;мл воды (140-150&nbsp;ppm), прямой метод заваривания.
+          li Помол&nbsp;9,2&nbsp;на EK43&nbsp;Mahlkoenig, температура воды 70&nbsp;C&deg;.
+        ol
+          li Залить 260&nbsp;мл волы за&nbsp;15&nbsp;секунд.
+          li Фаза &laquo;цветения&raquo; (настаивание или предсмачивание)&nbsp;&mdash; 40&nbsp;секунд.
+          li Продавливание&nbsp;&mdash; 2&nbsp;минуты 20&nbsp;секунд.<br /><br /> Общее время заваривания&nbsp;&mdash; 3&nbsp;минуты.
+        p &nbsp;
+        p Больше рецептов и&nbsp;истории <a href="#" title="World Aeropress Championship" target="_blank">World Aeropress Championship</a><br />Постеры: <a href="#" title="worldaeropresschampionship.com" target="_blank">worldaeropresschampionship.com</a>
+      .decor--firs.decor--firs-left
+      +social-share('Расскажите друзьям')
+  +post-teasers('Другие статьи')

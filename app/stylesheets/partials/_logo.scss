@@ -1,0 +1,17 @@
+.logo {
+  width: rem(70px);
+  height: rem(43px);
+  display: block;
+}
+
+.logo__img {
+  display: block;
+}
+
+
+@include breakpoint-up($breakpoint-lg) {
+  .logo {
+    width: rem(101px);
+    height: rem(62px);
+  }
+}

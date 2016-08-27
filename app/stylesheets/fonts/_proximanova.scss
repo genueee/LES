@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('#{$font-path}/proximanova-reg-webfont.woff') format('woff'),
+       url('#{$font-path}/proximanova-reg-webfont.ttf') format('truetype'),
+       url('#{$font-path}/proximanova-reg-webfont.svg#proxima_nova_rgregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('#{$font-path}/proximanova-regit-webfont.woff') format('woff'),
+       url('#{$font-path}/proximanova-regit-webfont.ttf') format('truetype'),
+       url('#{$font-path}/proximanova-regit-webfont.svg#proxima_novaregular_italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('#{$font-path}/proximanova-bold-webfont.woff') format('woff'),
+       url('#{$font-path}/proximanova-bold-webfont.ttf') format('truetype'),
+       url('#{$font-path}/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('#{$font-path}/proximanova-boldit-webfont.woff') format('woff'),
+       url('#{$font-path}/proximanova-boldit-webfont.ttf') format('truetype'),
+       url('#{$font-path}/proximanova-boldit-webfont.svg#proxima_novabold_italic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Proxima Nova ExtraCondensed';
+  src: url('#{$font-path}/proxima_nova_extra_condensed_regular-webfont.woff') format('woff'),
+       url('#{$font-path}/proxima_nova_extra_condensed_regular-webfont.ttf') format('truetype'),
+       url('#{$font-path}/proxima_nova_extra_condensed_regular-webfont.svg#proxima_nova_excn_rgregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova ExtraCondensed';
+  src: url('#{$font-path}/proxima_nova_extra_condensed_bold-webfont.woff') format('woff'),
+       url('#{$font-path}/proxima_nova_extra_condensed_bold-webfont.ttf') format('truetype'),
+       url('#{$font-path}/proxima_nova_extra_condensed_bold-webfont.svg#proxima_nova_excn_rgbold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
