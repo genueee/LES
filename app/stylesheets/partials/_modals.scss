@@ -1,25 +1,121 @@
 .modal {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: block;
-  background-color: rgba($color-pine, .9);
-  z-index: 5000;
+  display: none;
+  background-color: $color-white;
+
+  &.__open {
+    display: block;
+  }
 }
 
-.modal__layout {
-  width: 100%;
-  height: 100%;
-  display: table;
-}
+.modal__close {
+  width: auto;
+  height: auto;
+  margin: 0 0 0 rem(-15px);
+  padding: 0;
+  position: absolute;
+  top: rem(30px);
+  left: 50%;
+  border: 0;
+  border-radius: 0;
+  background: 0;
+  appearance: none;
+  outline: 0;
+  color: $color-pine;
+  font-size: rem(30px);
+  line-height: 0;
+  cursor: pointer;
 
-.modal__container {
-  display: table-cell;
-  vertical-align: middle;
+  .__no-touch & {
+    & {
+      opacity: 1;
+      transition: opacity .2s ease;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
 }
 
 .modal__dialog {
+  padding: rem(90px) $grid-gutter-width $grid-gutter-width;
+}
 
+
+// Media Queries
+@include breakpoint-up($breakpoint-md) {
+  .__modal-open {
+    body {
+      overflow: hidden;
+    }
+  }
+
+  .modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5000;
+    background-color: rgba($color-pine, .9);
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  .modal__layout {
+    width: 100%;
+    height: 100%;
+    display: table;
+  }
+
+  .modal__container {
+    padding: $grid-gutter-width;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .modal__dialog {
+    margin-right: auto;
+    margin-left: auto;
+    padding: rem(60px) $grid-gutter-width * 2;
+    position: relative;
+    background-color: $color-white;
+  }
+
+  .modal__close {
+    margin: 0;
+    top: rem(15px);
+    right: rem(15px);
+    left: auto;
+  }
+}
+
+@include breakpoint-up($breakpoint-lg) {
+  .modal__dialog {
+    padding: rem(60px);
+  }
+}
+
+
+@include breakpoint-down($breakpoint-md) {
+  .__modal-open {
+    .header,
+    .content,
+    .footer {
+      display: none;
+    }
+  }
+}
+
+
+// Order Modal
+@include breakpoint-up($breakpoint-md) {
+  .modal--order {
+    text-align: center;
+
+    .modal__dialog {
+      display: inline-block;
+      text-align: left;
+    }
+  }
 }

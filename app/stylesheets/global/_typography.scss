@@ -52,23 +52,21 @@ a[href^="tel:"] {
   line-height: rem(32px);
 }
 
+.title--h3 {
 
-// .font-museosanscyrl-thin {
-//   font-family: $font-family-museosanscyrl-thin;
+}
+
+.title--h4 {
+
+}
+
+// .title--h5 {
+//   font-size: rem(16px);
+//   line-height: rem(26px);
 // }
 
-// .font-museosanscyrl-light {
-//   font-family: $font-family-museosanscyrl-light;
-// }
 
-// .font-museosanscyrl {
-//   font-family: $font-family-museosanscyrl;
-// }
-
-// .font-museosanscyrl-black {
-//   font-family: $font-family-museosanscyrl-black;
-// }
-
+// Media Queries
 @include breakpoint-up($breakpoint-sm) {
   .title--h1 {
     font-size: rem(50px);
@@ -91,4 +89,9 @@ a[href^="tel:"] {
     font-size: rem(42px);
     line-height: rem(52px);
   }
+
+  // .title--h5 {
+  //   font-size: rem(18px);
+  //   line-height: rem(28px);
+  // }
 }

@@ -1,0 +1,65 @@
+.checkbox {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  .__no-touch & {
+    &:hover {
+      .checkbox__box {
+        &:before {
+          opacity: .2;
+        }
+      }
+    }
+  }
+}
+
+.checkbox__control {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+  .checkbox &:checked {
+    & + .checkbox__box {
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.checkbox__box {
+  width: rem(20px);
+  height: rem(20px);
+  position: relative;
+  display: inline-block;
+  float: left;
+  border: 1px solid $color-pine;
+  border-radius: 2px;
+
+  &:before {
+    @extend %icon;
+    content: $icon-tick;
+    margin: -.5em 0 0 -.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    color: $color-pine;
+    font-size: rem(10px);
+    transition: opacity .2s ease;
+  }
+}
+
+.checkbox__text {
+  padding-left: rem(32px);
+  display: block;
+}
+
+
+// Media Queries
+@include breakpoint-up($breakpoint-sm) {
+  .checkbox__box {
+    margin-top: rem(2px);
+  }
+}

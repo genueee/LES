@@ -1,0 +1,89 @@
+.select {
+  margin-top: rem(10px);
+  position: relative;
+
+  &.__error {
+    .select__arrow {
+      border-top-color: #d0021b;
+    }
+
+    .select__control {
+      border-bottom-color: #d0021b;
+      color: #d0021b;
+    }
+  }
+}
+
+.select__arrow {
+  width: 0;
+  height: 0;
+  margin-top: rem(-3px);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  border-top: rem(8px) solid $color-pine;
+  border-right: rem(6px) solid transparent;
+  border-left: rem(6px) solid transparent;
+  pointer-events: none;
+
+  &:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: rem(-7px);
+    left: rem(-4px);
+    border-top: rem(5px) solid $color-white;
+    border-right: rem(4px) solid transparent;
+    border-left: rem(4px) solid transparent;
+  }
+}
+
+.select__control {
+  @include normalize-text-size;
+  width: 100%;
+  height: rem(40px);
+  padding: rem(9px) 0;
+  border: 0;
+  border-bottom: 1px solid $color-pine;
+  background: 0;
+  border-radius: 0;
+  appearance: none;
+  color: $color-pine;
+  font-family: $font-family-base;
+  vertical-align: top;
+}
+
+
+// Media Queries
+@include breakpoint-up($breakpoint-sm) {
+  .select {
+    margin-top: rem(12px);
+  }
+
+  .select__control {
+    height: rem(42px);
+    padding-top: rem(8px);
+    padding-bottom: rem(8px);
+  }
+}
+
+@include breakpoint-up($breakpoint-lg) {
+  .select {
+    margin-top: rem(16px);
+  }
+
+  .select__arrow {
+    border-width: rem(9px) rem(7px) 0 rem(7px);
+
+    &:after {
+      top: rem(-8px);
+      left: rem(-5px);
+      border-width: rem(6px) rem(5px) 0 rem(5px);
+    }
+  }
+
+  .select__control {
+    height: rem(44px);
+  }
+}

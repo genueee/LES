@@ -8,7 +8,7 @@
   background: none;
   box-sizing: border-box;
   appearance: none;
-  font-family: $font-family-proximanova-extracond;
+  font-family: $font-family-proximanova;
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
@@ -42,6 +42,11 @@ a.button {
 // Styles
 .button--dark {
   @include button-style($color-dark, $color-white);
+
+  &.__disabled,
+  &[disabled] {
+    background-color: #c4c4c4;
+  }
 
   &.button--outline {
     @include button-outline(rgba($color-dark, .5), $color-dark, $color-dark, $color-white);

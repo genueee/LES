@@ -1,0 +1,103 @@
+.input {
+  margin-top: rem(10px);
+  position: relative;
+  display: block;
+
+  &.__focus {
+    .input__label {
+      top: rem(-10px);
+      font-size: rem(12px);
+      color: #9b9b9b;
+    }
+  }
+
+  &.__error {
+    .input__label {
+      color: #d0021b;
+    }
+
+    .input__control {
+      border-bottom-color: #d0021b;
+      color: #d0021b;
+    }
+  }
+}
+
+.input__label {
+  @include normalize-text-size;
+  @include ellipsis;
+  max-width: 100%;
+  position: absolute;
+  top: rem(9px);
+  left: 0;
+  color: $color-pine;
+  cursor: text;
+  transition: top .2s ease, color .2s ease, font-size .2s ease;
+}
+
+.input__control {
+  @include normalize-text-size;
+  width: 100%;
+  height: rem(40px);
+  padding: rem(9px) 0;
+  border: 0;
+  border-bottom: 1px solid $color-pine;
+  background: 0;
+  border-radius: 0;
+  appearance: none;
+  color: $color-pine;
+  font-family: $font-family-base;
+  vertical-align: top;
+}
+
+textarea.input__control {
+  height: rem(100px);
+}
+
+
+// Media Queries
+@include breakpoint-up($breakpoint-sm) {
+  .input {
+    margin-top: rem(12px);
+
+    &.__focus {
+      .input__label {
+        top: rem(-12px);
+        font-size: rem(13px);
+      }
+    }
+  }
+
+  .input__label {
+    top: rem(8px);
+  }
+
+  .input__control {
+    height: rem(42px);
+    padding-top: rem(8px);
+    padding-bottom: rem(8px);
+  }
+}
+
+@include breakpoint-up($breakpoint-lg) {
+  .input {
+    margin-top: rem(16px);
+
+    &.__focus {
+      .input__label {
+        top: rem(-16px);
+        font-size: rem(14px);
+      }
+    }
+  }
+
+  .input__label {
+    top: rem(8px);
+  }
+
+  .input__control {
+    height: rem(44px);
+    padding-top: rem(8px);
+    padding-bottom: rem(8px);
+  }
+}

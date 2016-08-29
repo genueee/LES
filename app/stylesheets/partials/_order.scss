@@ -1,0 +1,277 @@
+.order {
+  padding-bottom: rem(30px);
+
+  .cart {
+    margin-bottom: rem(50px);
+  }
+}
+
+.order__section {
+  &.__hide {
+    display: none;
+  }
+}
+
+.order__section--message {
+  text-align: center;
+}
+
+.order__title {
+  margin: 0 0 rem(30px);
+  text-align: center;
+}
+
+.order__column--checkbox {
+  margin-top: rem(50px);
+}
+
+.order__column--button {
+  margin-top: rem(28px);
+}
+
+.order__switchers {
+  margin-bottom: rem(44px);
+}
+
+.order__switcher {
+  position: relative;
+  display: block;
+  user-select: none;
+
+  & + & {
+    margin-top: -1px;
+  }
+}
+
+.order__switcher-control {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+
+  &:checked + .order__switcher-content {
+    background-color: $color-pine;
+    color: $color-white;
+  }
+}
+
+.order__switcher-content {
+  height: rem(60px);
+  padding: rem(7px);
+  display: block;
+  border: 1px solid $color-pine;
+  color: $color-pine;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.order__switcher-title {
+  @include ellipsis;
+  display: block;
+  font-weight: bold;
+  font-size: rem(18px);
+  line-height: rem(28px);
+}
+
+.order__switcher-subtitle {
+  @include ellipsis;
+  margin-top: rem(-4px);
+  display: block;
+  font-size: rem(13px);
+  line-height: rem(20px);
+}
+
+.order__item {
+  margin-bottom: rem(20px);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.order__link {
+  padding: rem(4px) 0;
+  border-bottom: 1px solid rgba($color-pine, .2%);
+}
+
+.order__message {
+  width: rem(230px);
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: rem(40px);
+  padding-bottom: rem(40px);
+}
+
+.order__message-title {
+  margin: 0 0 rem(16px);
+}
+
+.order__message-text {
+  margin: rem(16px) 0;
+}
+
+
+// Media Queries
+@include breakpoint-up($breakpoint-sm) {
+  .order__switcher-content {
+    height: rem(70px);
+    padding-top: rem(9px);
+    padding-bottom: rem(9px);
+  }
+
+  .order__switcher-title {
+    font-size: rem(20px);
+    line-height: rem(30px);
+  }
+
+  .order__switcher-subtitle {
+    margin-top: rem(-2px);
+    font-size: rem(14px);
+    line-height: rem(22px);
+  }
+
+  .order__message {
+    width: auto;
+  }
+}
+
+@include breakpoint-up($breakpoint-md) {
+  .order {
+    .cart {
+      margin-bottom: 0;
+    }
+  }
+
+  .order__title {
+    display: none;
+  }
+
+  .order__columns {
+    @include clearfix;
+  }
+
+  .order__column--right {
+    width: rem(296px);
+    position: relative;
+    float: right;
+  }
+
+  .order__column--left {
+    width: 100%;
+    margin-right: -100%;
+    padding-right: rem(338px);
+    float: left;
+  }
+
+  .order__columns--top {
+    padding-top: rem(124px);
+    position: relative;
+  }
+
+  .order__column--checkbox {
+    margin-top: rem(52px);
+  }
+
+  .order__column--button {
+    margin-top: rem(30px);
+  }
+
+  .order__switchers--delivery {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .order__switchers {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+  }
+
+  .order__switcher {
+    display: table-cell;
+    vertical-align: top;
+
+    & + & {
+      margin-top: 0;
+
+      .order__switcher-content {
+        margin-left: -1px;
+      }
+    }
+  }
+
+  .order__button {
+    height: rem(70px);
+    line-height: rem(70px);
+  }
+
+  .order__section {
+    width: rem(640px);
+  }
+}
+
+@include breakpoint-up($breakpoint-lg) {
+  .order {
+    padding-right: rem(56px);
+    padding-left: rem(56px);
+    padding-bottom: rem(20px);
+  }
+
+  .order__section--form {
+    width: rem(700px);
+  }
+
+  .order__columns--top {
+    padding-top: rem(130px);
+  }
+
+  .order__column--checkbox {
+    margin-top: rem(56px);
+  }
+
+  .order__switcher-content {
+    height: rem(80px);
+    padding-top: rem(13px);
+    padding-bottom: rem(13px);
+  }
+
+  .order__switcher-title {
+    font-size: rem(21px);
+    line-height: rem(30px);
+  }
+
+  .order__switcher-subtitle {
+    margin-top: 0;
+    font-size: rem(15px);
+    line-height: rem(22px);
+  }
+
+  .order__item {
+    margin-bottom: rem(30px);
+  }
+
+  .order__button {
+    height: rem(80px);
+    line-height: rem(80px);
+  }
+
+  .order__message-title {
+    margin-bottom: rem(10px);
+  }
+
+  .order__message-text {
+    margin: rem(10px) 0;
+  }
+
+  .order__section--message {
+    width: rem(528px);
+  }
+}
+
+@include breakpoint-up($breakpoint-xl) {
+  .order__section--form {
+    width: rem(808px);
+  }
+}

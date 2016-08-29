@@ -1,0 +1,18 @@
+extend ./layout.pug
+include ./mixins/header.pug
+include ./mixins/social-share.pug
+include ./mixins/modal-order.pug
+
+block vars
+  - var htmlExtraClass = ' __modal-open'
+
+block header
+  +header('subscription')
+
+block content-header
+  include ./shared/hero_subscription.pug
+block content-body
+  include ./shared/product-subscriptions.pug
+
+block modals
+  +modal-order('form')

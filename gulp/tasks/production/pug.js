@@ -9,7 +9,7 @@ gulp.task('[Production] Pug', function(){
 
   return gulp.src(config.src)
     .pipe(pug({
-      pretty: true
+      // pretty: true
     }))
     .pipe(inject(sources, config.inject.options))
     .on('error', gutil.log)

@@ -21,6 +21,7 @@ window.App = {
 
 require('./modules/Navigation.js');
 require('./modules/Slider.js');
+require('./modules/Field.js');
 require('./modules/GoogleMaps.js');
 require('./modules/GoogleMapsLoader.js');
 require('./modules/ProductTipsy.js');
@@ -52,39 +53,50 @@ require('./modules/IconMixer.js');
 
     $('[data-hero-slider]').addClass('__inited').slick();
 
-    $('[data-post-slider]').each(function(){
-      var slider = new App.Slider(this, {
-        slick: {
-          infinite: false,
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          responsive: [
-            {
-              breakpoint: 768,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2
-              }
-            },
-            {
-              breakpoint: 544,
-              settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-              }
+    $('[data-slider]').each(function(){
+      var sliderOptions;
+
+      switch ($(this).data('slider')) {
+        case 'posts':
+          sliderOptions = {
+            slick: {
+              infinite: false,
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              responsive: [
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                  }
+                },
+                {
+                  breakpoint: 544,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+              ]
             }
-          ]
-        }
-      });
+          };
+          break;
+        case 'single':
+          sliderOptions = {
+            slick: {
+              infinite: false
+            }
+          };
+          break;
+      }
+
+      var slider = new App.Slider(this, sliderOptions);
     });
 
-    $('[data-single-slider]').each(function(){
-      var slider = new App.Slider(this, {
-        slick: {
-          infinite: false
-        }
-      });
-    })
+    $('[data-field]').each(function(){
+      new App.Field(this);
+    });
 
 
     var $googleMap = $('[data-google-map]');
@@ -98,7 +110,6 @@ require('./modules/IconMixer.js');
         });
       });
     }
-
 
 
     $('[data-icon-mix]').each(function(){

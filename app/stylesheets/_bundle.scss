@@ -54,6 +54,9 @@
 @import 'partials/error-layout';
 
 // UI
+@import 'partials/inputs';
+@import 'partials/selects';
+@import 'partials/checkboxes';
 @import 'partials/buttons';
 @import 'partials/social-buttons';
 @import 'partials/social-share';
@@ -75,3 +78,5 @@
 @import 'partials/product-subscriptions';
 @import 'partials/product-tipsy';
 @import 'partials/product-weight-slider';
+@import 'partials/order';
+@import 'partials/cart';

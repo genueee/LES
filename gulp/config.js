@@ -18,7 +18,7 @@ module.exports = {
   },
   githubPages: {
     local: {
-      src: BUILD + '/**/*',
+      src: DIST + '/**/*',
       options: {
         message: 'gh-pages'
       }
@@ -124,7 +124,8 @@ module.exports = {
           BUILD + '/css/bundle.css'
         ],
         options: {
-          ignorePath: BUILD.replace('./', '')
+          ignorePath: BUILD.replace('./', ''),
+          addRootSlash: false
         }
       },
       dest: BUILD
@@ -144,7 +145,8 @@ module.exports = {
           DIST + '/css/bundle.min.css'
         ],
         options: {
-          ignorePath: DIST.replace('./', '')
+          ignorePath: DIST.replace('./', ''),
+          addRootSlash: false
         }
       },
       dest: DIST

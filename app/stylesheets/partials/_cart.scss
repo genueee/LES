@@ -1,0 +1,146 @@
+.cart {
+  padding: rem(20px) rem(12px);
+  background-color: #f5efec;
+}
+
+.cart__title {
+  margin: 0 0 rem(18px);
+  color: #ae9284;
+  font-weight: normal;
+  font-size: rem(20px);
+  line-height: rem(24px);
+  font-family: $font-family-proximanova-extracond;
+  text-transform: uppercase;
+}
+
+.cart__item {
+  @include clearfix;
+  margin-bottom: rem(30px);
+}
+
+.cart__image {
+  width: rem(57px);
+  height: rem(85px);
+  margin-top: rem(12px);
+  position: relative;
+  float: right;
+}
+
+.cart__image-img {
+  width: 100%;
+  height: auto;
+}
+
+.cart__name {
+  margin: 0 0 rem(18px);
+  font-weight: bold;
+  font-size: rem(16px);
+  line-height: rem(26px);
+}
+
+.cart__options {
+  @include list-style-none;
+}
+
+.cart__option {
+  margin: rem(8px) 0;
+  padding-left: rem(22px);
+  position: relative;
+
+  .icon {
+    position: absolute;
+    top: 0;
+    left: rem(-2px);
+    color: #ae9284;
+    font-size: rem(18px);
+  }
+
+  .icon--weight {
+    top: rem(-2px);
+  }
+}
+
+.cart__total {
+  @include clearfix;
+  padding-top: rem(24px);
+  border-top: 1px solid #ae9284;
+}
+
+.cart__total-text {
+  width: 50%;
+  padding-top: rem(1px);
+  float: left;
+}
+
+.cart__total-sum {
+  width: 50%;
+  float: right;
+  font-weight: bold;
+  font-size: rem(18px);
+  line-height: rem(22px);
+  text-align: right;
+}
+
+@include breakpoint-up($breakpoint-sm) {
+  .cart {
+    padding: rem(20px);
+  }
+
+  .cart__title {
+    font-size: rem(22px);
+    line-height: rem(26px);
+  }
+
+  .cart__item {
+    margin-bottom: rem(38px);
+  }
+
+  .cart__name {
+    margin-bottom: rem(12px);
+    font-size: rem(18px);
+    line-height: rem(28px);
+  }
+
+  .cart__option {
+    margin: rem(4px) 0;
+
+    .icon {
+      top: rem(3px);
+    }
+
+    .icon--weight {
+      top: rem(1px);
+    }
+  }
+}
+
+@include breakpoint-up($breakpoint-lg) {
+  .cart__title {
+    margin-bottom: rem(24px);
+  }
+
+  .cart__option {
+    margin: rem(2px) 0;
+
+    .icon {
+      top: rem(4px);
+    }
+
+    .icon--weight {
+      top: rem(2px);
+    }
+  }
+
+  .cart__total {
+    padding-bottom: rem(4px);
+  }
+
+  .cart__total-text {
+    padding-top: 0;
+  }
+
+  .cart__total-sum {
+    padding-top: rem(2px);
+    font-size: rem(21px);
+  }
+}

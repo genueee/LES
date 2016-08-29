@@ -1,0 +1,182 @@
+include ./../mixins/product-tipsy.pug
+
+.product-subscriptions
+  h2.product-subscriptions__title.title.title--h2 Выберите сорт кофе, вес и&nbsp;срок подписки
+  .product-subscriptions__list
+    .product-subscriptions__item
+      .product-subscription
+        .product-subscription__image
+          img.product-subscription__image-img(src="assets/products/packet-coffee.png", alt="")
+        .product-subscription__content
+          .product-subscription__globe
+            span.icon.icon--globe
+          h3.product-subscription__title.title.title--h2 Южная Америка
+          ul.product-subscription__options
+            li.product-subscription__options-item
+              label.product-subscription__option
+                input.product-subscription__option-control(type="radio", name="product-subscription-options-1", value="Brazil Santos", checked="")
+                span.product-subscription__option-icon
+                span.product-subscription__option-text Бразилия <span>Сантос</span>
+                +product-tipsy('product-subscription__help')
+            li.product-subscription__options-item
+              label.product-subscription__option
+                input.product-subscription__option-control(type="radio", name="product-subscription-options-1", value="Colombia Flat")
+                span.product-subscription__option-icon
+                span.product-subscription__option-text Колумбия <span>Флэт</span>
+                +product-tipsy('product-subscription__help')
+            li.product-subscription__options-item
+              label.product-subscription__option
+                input.product-subscription__option-control(type="radio", name="product-subscription-options-1", value="Brazil Santos")
+                span.product-subscription__option-icon
+                span.product-subscription__option-text Бразилия <span>Сантос</span>
+                +product-tipsy('product-subscription__help')
+            li.product-subscription__options-item
+              label.product-subscription__option
+                input.product-subscription__option-control(type="radio", name="product-subscription-options-1", value="Colombia Flat")
+                span.product-subscription__option-icon
+                span.product-subscription__option-text Колумбия <span>Флэт</span>
+                +product-tipsy('product-subscription__help')
+            li.product-subscription__options-item
+              label.product-subscription__option
+                input.product-subscription__option-control(type="radio", name="product-subscription-options-1", value="Brazil Santos")
+                span.product-subscription__option-icon
+                span.product-subscription__option-text Бразилия <span>Сантос</span>
+                +product-tipsy('product-subscription__help')
+          .product-subscription__weight.product-weight-slider
+            div(data-product-weight-slider="", data-values="[500, 1000, 1500]", data-start="1000", data-prefix="Гр")
+          .product-subscription__periods
+            label.product-subscription__period
+              input.product-subscription__period-control(type="radio", name="product-subscription-periods-1", value="single")
+              span.product-subscription__period-content
+                span.product-subscription__period-icon
+                  span.icon.icon--basket
+                span.product-subscription__period-title Разовая
+                span.product-subscription__period-price 1 150 Р
+            label.product-subscription__period
+              input.product-subscription__period-control(type="radio", name="product-subscription-periods-1", value="3-months")
+              span.product-subscription__period-content
+                span.product-subscription__period-icon
+                  span.icon.icon--basket
+                span.product-subscription__period-title 3 месяца
+                span.product-subscription__period-price 6 150 Р
+            label.product-subscription__period
+              input.product-subscription__period-control(type="radio", name="product-subscription-periods-1", value="6-months")
+              span.product-subscription__period-content
+                span.product-subscription__period-icon
+                  span.icon.icon--basket
+                span.product-subscription__period-title 6 месяцев
+                span.product-subscription__period-price 11 150 Р
+    .product-subscriptions__item
+      .product-subscription
+        .product-subscription__image
+          img.product-subscription__image-img(src="assets/products/packet-coffee.png", alt="")
+        .product-subscription__content
+          .product-subscription__globe
+            span.icon.icon--globe
+          h3.product-subscription__title.title.title--h2 Европа
+          ul.product-subscription__options
+            li.product-subscription__options-item
+              label.product-subscription__option
+                input.product-subscription__option-control(type="radio", name="product-subscription-options-2", value="Brazil Santos", checked="")
+                span.product-subscription__option-icon
+                span.product-subscription__option-text Испания <span>Сантос</span>
+                +product-tipsy('product-subscription__help')
+            li.product-subscription__options-item
+              label.product-subscription__option
+                input.product-subscription__option-control(type="radio", name="product-subscription-options-2", value="Colombia Flat")
+                span.product-subscription__option-icon
+                span.product-subscription__option-text Италия <span>Флэт</span>
+                +product-tipsy('product-subscription__help')
+            li.product-subscription__options-item
+              label.product-subscription__option
+                input.product-subscription__option-control(type="radio", name="product-subscription-options-2", value="Brazil Santos")
+                span.product-subscription__option-icon
+                span.product-subscription__option-text Англия <span>Сантос</span>
+                +product-tipsy('product-subscription__help')
+            li.product-subscription__options-item
+              label.product-subscription__option
+                input.product-subscription__option-control(type="radio", name="product-subscription-options-2", value="Colombia Flat")
+                span.product-subscription__option-icon
+                span.product-subscription__option-text Колумбия <span>Флэт</span>
+                +product-tipsy('product-subscription__help')
+            li.product-subscription__options-item
+              label.product-subscription__option
+                input.product-subscription__option-control(type="radio", name="product-subscription-options-2", value="Brazil Santos")
+                span.product-subscription__option-icon
+                span.product-subscription__option-text Бразилия <span>Сантос</span>
+                +product-tipsy('product-subscription__help')
+          .product-subscription__weight.product-weight-slider
+            div(data-product-weight-slider="", data-values="[500, 1000, 1500]", data-start="1000", data-prefix="Гр")
+          .product-subscription__periods
+            label.product-subscription__period
+              input.product-subscription__period-control(type="radio", name="product-subscription-periods-2", value="single")
+              span.product-subscription__period-content
+                span.product-subscription__period-icon
+                  span.icon.icon--basket
+                span.product-subscription__period-title Разовая
+                span.product-subscription__period-price 1 150 Р
+            label.product-subscription__period
+              input.product-subscription__period-control(type="radio", name="product-subscription-periods-2", value="3-months")
+              span.product-subscription__period-content
+                span.product-subscription__period-icon
+                  span.icon.icon--basket
+                span.product-subscription__period-title 3 месяца
+                span.product-subscription__period-price 6 150 Р
+            label.product-subscription__period
+              input.product-subscription__period-control(type="radio", name="product-subscription-periods-2", value="6-months")
+              span.product-subscription__period-content
+                span.product-subscription__period-icon
+                  span.icon.icon--basket
+                span.product-subscription__period-title 6 месяцев
+                span.product-subscription__period-price 11 150 Р
+    .product-subscriptions__item
+      .product-subscription
+        .product-subscription__image
+          img.product-subscription__image-img(src="assets/products/packet-coffee.png", alt="")
+        .product-subscription__content
+          .product-subscription__globe
+            span.icon.icon--globe
+          h3.product-subscription__title.title.title--h2 Австралия
+          ul.product-subscription__options
+            li.product-subscription__options-item
+              label.product-subscription__option
+                input.product-subscription__option-control(type="radio", name="product-subscription-options-3", value="Brazil Santos", checked="")
+                span.product-subscription__option-icon
+                span.product-subscription__option-text Бразилия <span>Сантос</span>
+                +product-tipsy('product-subscription__help')
+            li.product-subscription__options-item
+              label.product-subscription__option
+                input.product-subscription__option-control(type="radio", name="product-subscription-options-3", value="Colombia Flat")
+                span.product-subscription__option-icon
+                span.product-subscription__option-text Колумбия <span>Флэт</span>
+                +product-tipsy('product-subscription__help')
+            li.product-subscription__options-item
+              label.product-subscription__option
+                input.product-subscription__option-control(type="radio", name="product-subscription-options-3", value="Brazil Santos")
+                span.product-subscription__option-icon
+                span.product-subscription__option-text Бразилия <span>Сантос</span>
+                +product-tipsy('product-subscription__help')
+          .product-subscription__weight.product-weight-slider
+            div(data-product-weight-slider="", data-values="[500, 1000, 1500]", data-start="1000", data-prefix="Гр")
+          .product-subscription__periods
+            label.product-subscription__period
+              input.product-subscription__period-control(type="radio", name="product-subscription-periods-3", value="single")
+              span.product-subscription__period-content
+                span.product-subscription__period-icon
+                  span.icon.icon--basket
+                span.product-subscription__period-title Разовая
+                span.product-subscription__period-price 1 150 Р
+            label.product-subscription__period
+              input.product-subscription__period-control(type="radio", name="product-subscription-periods-3", value="3-months")
+              span.product-subscription__period-content
+                span.product-subscription__period-icon
+                  span.icon.icon--basket
+                span.product-subscription__period-title 3 месяца
+                span.product-subscription__period-price 6 150 Р
+            label.product-subscription__period
+              input.product-subscription__period-control(type="radio", name="product-subscription-periods-3", value="6-months")
+              span.product-subscription__period-content
+                span.product-subscription__period-icon
+                  span.icon.icon--basket
+                span.product-subscription__period-title 6 месяцев
+                span.product-subscription__period-price 11 150 Р

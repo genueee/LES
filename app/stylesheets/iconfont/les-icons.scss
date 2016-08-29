@@ -58,42 +58,50 @@ $icon-clock: "\EA08";
 %icon-clock { content: $icon-clock }
 .icon--clock:before { @extend %icon-clock; }
 
-$icon-coffee: "\EA09";
+$icon-clock2: "\EA09";
+%icon-clock2 { content: $icon-clock2 }
+.icon--clock2:before { @extend %icon-clock2; }
+
+$icon-coffee: "\EA0A";
 %icon-coffee { content: $icon-coffee }
 .icon--coffee:before { @extend %icon-coffee; }
 
-$icon-cross: "\EA0A";
+$icon-cross: "\EA0B";
 %icon-cross { content: $icon-cross }
 .icon--cross:before { @extend %icon-cross; }
 
-$icon-facebook: "\EA0B";
+$icon-facebook: "\EA0C";
 %icon-facebook { content: $icon-facebook }
 .icon--facebook:before { @extend %icon-facebook; }
 
-$icon-fir: "\EA0C";
+$icon-fir: "\EA0D";
 %icon-fir { content: $icon-fir }
 .icon--fir:before { @extend %icon-fir; }
 
-$icon-globe: "\EA0D";
+$icon-globe: "\EA0E";
 %icon-globe { content: $icon-globe }
 .icon--globe:before { @extend %icon-globe; }
 
-$icon-instagram: "\EA0E";
+$icon-instagram: "\EA0F";
 %icon-instagram { content: $icon-instagram }
 .icon--instagram:before { @extend %icon-instagram; }
 
-$icon-moped: "\EA0F";
+$icon-moped: "\EA10";
 %icon-moped { content: $icon-moped }
 .icon--moped:before { @extend %icon-moped; }
 
-$icon-tick: "\EA10";
+$icon-tick: "\EA11";
 %icon-tick { content: $icon-tick }
 .icon--tick:before { @extend %icon-tick; }
 
-$icon-twitter: "\EA11";
+$icon-twitter: "\EA12";
 %icon-twitter { content: $icon-twitter }
 .icon--twitter:before { @extend %icon-twitter; }
 
-$icon-vkontakte: "\EA12";
+$icon-vkontakte: "\EA13";
 %icon-vkontakte { content: $icon-vkontakte }
 .icon--vkontakte:before { @extend %icon-vkontakte; }
+
+$icon-weight: "\EA14";
+%icon-weight { content: $icon-weight }
+.icon--weight:before { @extend %icon-weight; }

@@ -1,0 +1,77 @@
+mixin modal-order(state)
+  .modal.modal--order.__open
+    .modal__layout
+      .modal__container
+        .modal__dialog
+          .modal__close
+            span.icon.icon--cross
+          .modal__body
+            .order
+              .order__section.order__section--form(class=state == 'form' ? "" : "__hide")
+                form.order__form(action="?")
+                  .order__title.title.title--h2 Оформление подписки
+                  .order__columns.order__columns--top
+                    .order__column.order__column--right
+                      .cart
+                        .cart__title Состав заказа
+                        .cart__item
+                          .cart__image
+                            img.cart__image-img(src="assets/products/packet-coffee.png", alt="")
+                          h5.cart__name Бразилия Сантос
+                          ul.cart__options
+                            li.cart__option
+                              span.icon.icon--weight
+                              | 1000 гр
+                            li.cart__option
+                              span.icon.icon--clock2
+                              | 6 месяцев
+                        .cart__total
+                          .cart__total-text Итого
+                          .cart__total-sum 1 399 Р
+                    .order__column.order__column--left
+                      .order__title.title.title--h2 Выберите способ получения
+                      .order__switchers.order__switchers--delivery
+                        label.order__switcher
+                          input.order__switcher-control(type="radio", name="delivery", checked="")
+                          span.order__switcher-content
+                            span.order__switcher-title Самовывоз
+                            span.order__switcher-subtitle На следующий день
+                        label.order__switcher
+                          input.order__switcher-control(type="radio", name="delivery")
+                          span.order__switcher-content
+                            span.order__switcher-title Пункт выдачи
+                            span.order__switcher-subtitle 1 день
+                        label.order__switcher
+                          input.order__switcher-control(type="radio", name="delivery")
+                          span.order__switcher-content
+                            span.order__switcher-title Доставка курьером
+                            span.order__switcher-subtitle 1 день + 300 Р
+                      .order__item
+                        label.input(data-field="")
+                          span.input__label(data-field-label="") Как вас зовут?
+                          input.input__control(data-field-control="", type="text")
+                      .order__item
+                        .select.__error
+                          span.select__arrow
+                          select.select__control
+                            option Откуда вам удобнее забрать?
+                      .order__item
+                        label.input(data-field="")
+                          span.input__label(data-field-label="") Телефон для уточнения деталей
+                          input.input__control(data-field-control="", type="text")
+                      .order__item
+                        label.input(data-field="")
+                          span.input__label(data-field-label="") Email для уведомления о статусе подписки
+                          input.input__control(data-field-control="", type="text")
+                  .order__columns
+                    .order__column.order__column--left.order__column--checkbox
+                      label.checkbox
+                        input.checkbox__control(type="checkbox", checked="")
+                        span.checkbox__box
+                        span.checkbox__text Соглашаюсь с <a class="order__link" href="#" title="Условия подписки">условиями подписки</a>
+                    .order__column.order__column--right.order__column--button
+                      button.order__button.button.button--dark.button--block.__disabled(disabled="") Перейти к оплате
+              .order__section.order__section--message(class=state == 'success' ? "" : "__hide")
+                .order__message
+                  .order__message-title.title.title--h2 Это успех, Андрей!
+                  p.order__message-text В&nbsp;ближайшее время с&nbsp;вами свяжется наш менеджер.

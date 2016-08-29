@@ -1,0 +1,22 @@
+mixin product-tipsy(extraClass)
+  span.product-tipsy(data-product-tipsy, class=extraClass)
+    span.product-tipsy__toggle(data-product-tipsy-toggle) ?
+    .product-tipsy__popup(data-product-tipsy-popup)
+      .product-tipsy__popup-arrow(data-product-tipsy-popup-arrow)
+      .product-tipsy__popup-inner
+        p.product-tipsy__text Ноты черной смородины и шиповника. Приятное шоколадное послевкусие.
+        ul.product-tipsy__list
+          li.product-tipsy__item
+            .product-tipsy__table
+              .product-tipsy__table-cell
+                .product-tipsy__icon
+                  img.product-tipsy__icon-img(src="assets/product-features/express.svg", width="80", alt="Express")
+              .product-tipsy__table-cell
+                p.product-tipsy__text Express
+          li.product-tipsy__item
+            .product-tipsy__table
+              .product-tipsy__table-cell
+                .product-tipsy__icon
+                  img.product-tipsy__icon-img(src="assets/product-features/kemex.svg", alt="Kemex")
+              .product-tipsy__table-cell
+                p.product-tipsy__text Kemex

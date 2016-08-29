@@ -1,24 +1,27 @@
 doctype html
-<html class="__no-js">
-include ./shared/head.pug
 
-body
-  //- .layout
-  block header
+block vars
+  - var htmlExtraClass = ''
 
-  main.content
-    .content__header
-      block content-header
-    .content__layout
-      .content__body
-        block content-body
+html.__no-js(class=htmlExtraClass)
+  include ./shared/head.pug
 
-  include ./shared/footer.pug
+  body
+    //- .layout
+    block header
 
-  block modals
+    main.content
+      .content__header
+        block content-header
+      .content__layout
+        .content__body
+          block content-body
 
-  //- Scripts
-  // inject:js
-  // endinject
-  //- end Scripts
-</html>
+    include ./shared/footer.pug
+
+    block modals
+
+    //- Scripts
+    // inject:js
+    // endinject
+    //- end Scripts
