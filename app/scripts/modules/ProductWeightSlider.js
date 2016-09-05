@@ -79,9 +79,22 @@ App.ProductWeightSlider = (function($, App){
         elements = self.elements,
         values = self.options.values;
 
-      elements.slider.noUiSlider.on('update', function(){
-        self.activateValue(elements.$sliderValues.eq(self.getIndexToActivateValue()));
-      });
+        elements.slider.noUiSlider.on('update', function (value) {
+          self.activateValue(elements.$sliderValues.eq(self.getIndexToActivateValue()));
+
+          var input = $('input',elements.slider).get(0);
+          if(input){
+            input.value = parseInt(value.pop(),10);
+            if ("createEvent" in document) {
+              var event = document.createEvent("HTMLEvents");
+              event.initEvent("change", false, true);
+              input.dispatchEvent(event);
+            }
+            else {
+              input.fireEvent("onchange");
+            }
+          }
+        });
 
       elements.$sliderValues.each(function(i){
         var $this = $(this);
