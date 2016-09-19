@@ -161,6 +161,15 @@
   text-align: center;
 }
 
+.footer__developer {
+  @include normalize-text-size;
+  margin: 0;
+  color: #a1a1a1;
+}
+
+.footer__developer-link {
+  color: $color-base;
+}
 
 // Media Queries
 @include breakpoint-up($breakpoint-sm) {
