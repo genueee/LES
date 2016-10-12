@@ -191,6 +191,7 @@
 // Media Queries
 @include breakpoint-up($breakpoint-md) {
   .header__logo {
+    margin-right: -100%;
     padding-right: rem(10px);
     float: left;
     z-index: 2;
@@ -204,7 +205,6 @@
   .header__nav {
     padding: rem(18px) 0 0 0;
     display: block;
-    display: flex;
     position: relative;
     top: auto;
     right: auto;
@@ -222,7 +222,9 @@
   }
 
   .header__nav-list--main {
-    flex: 1 0 auto;
+    width: 100%;
+    margin-right: -100%;
+    padding: 0 rem(100px);
     text-align: center;
     float: left;
   }

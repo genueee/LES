@@ -756,6 +756,7 @@ body {
 
 @media screen and (min-width: 48em) {
   .header__logo {
+    margin-right: -100%;
     padding-right: 0.625rem;
     float: left;
     z-index: 2; }
@@ -765,10 +766,6 @@ body {
   .header__nav {
     padding: 1.125rem 0 0 0;
     display: block;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     position: relative;
     top: auto;
     right: auto;
@@ -782,10 +779,9 @@ body {
     line-height: 2.625rem;
     font-weight: normal; }
   .header__nav-list--main {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1 0 auto;
-        -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
+    width: 100%;
+    margin-right: -100%;
+    padding: 0 6.25rem;
     text-align: center;
     float: left; }
   .header__nav-list--aside {
