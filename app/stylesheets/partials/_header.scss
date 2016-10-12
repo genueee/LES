@@ -266,8 +266,6 @@
     }
 
     .header__nav-item.__active & {
-      pointer-events: none;
-
       &:after {
         content: "";
         height: 0;

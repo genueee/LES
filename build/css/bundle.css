@@ -812,18 +812,16 @@ body {
       opacity: 1; }
       .__no-touch .header__nav-link:hover:after {
         border-top: 4px solid; }
-    .header__nav-item.__active .header__nav-link {
-      pointer-events: none; }
-      .header__nav-item.__active .header__nav-link:after {
-        content: "";
-        height: 0;
-        position: absolute;
-        right: -2px;
-        bottom: 0;
-        left: -2px;
-        border-top: 4px solid;
-        -webkit-transition: border .2s ease;
-        transition: border .2s ease; }
+    .header__nav-item.__active .header__nav-link:after {
+      content: "";
+      height: 0;
+      position: absolute;
+      right: -2px;
+      bottom: 0;
+      left: -2px;
+      border-top: 4px solid;
+      -webkit-transition: border .2s ease;
+      transition: border .2s ease; }
   .__nav-open body {
     overflow: visible; }
   .__nav-open .header__nav {
